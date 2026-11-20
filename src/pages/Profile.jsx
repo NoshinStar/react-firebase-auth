@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
-import { useAuth } from "../AuthContext";
-import AuthLayout from "../AuthLayout";
+import { useAuth } from "../context/AuthContext";
+import AuthLayout from "../components/AuthLayout";
 
 export default function Profile() {
   const { user } = useAuth();

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import AuthLayout from "../AuthLayout";
+import AuthLayout from "../components/AuthLayout";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -35,7 +35,9 @@ export default function Register() {
           />
         </div>
         <div>
-          <label className="text-sm text-gray-500">Password (min 6 chars)</label>
+          <label className="text-sm text-gray-500">
+            Password (min 6 chars)
+          </label>
           <input
             type="password"
             value={password}
